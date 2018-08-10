@@ -40,56 +40,19 @@
 
 <!-- Begin page -->
 <div id="wrapper">
-
-    <!-- Top Bar Start -->
-    <div class="topbar">
-        <!-- LOGO -->
-        <div class="topbar-left">
-            <div class="text-center">
-
-            </div>
-        </div>
-
-        <!-- Button mobile view to collapse sidebar menu -->
-        <div class="navbar navbar-default" role="navigation">
-            <div class="container">
-
-            </div>
-        </div>
-    </div>
-    <!-- Top Bar End -->
-
-</div>
-<!-- Top Bar End -->
-
-
-<!-- ========== Left Sidebar start ========== -->
-
-<!--<div class="left side-menu">-->
-<!--    <div class="sidebar-inner slimscrollleft">-->
-<!--        <!--- Divider -->-->
-<!--        <div id="sidebar-menu">-->
-<!--            ...-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
-<!-- ========== Left Sidebar end ========== -->
-
-<!-- ========== main content start ========== -->
-<div class="content-page">
-
     <!-- content -->
     <div class="content">
         <div class="row">
             <div class="col-lg-12">
                 <div class="card-box">
-                    <h4 class="m-t-0 header-title"><b>Basic Form</b></h4>
-                    <p class="text-muted font-13 m-b-30">
-                        Your awesome text goes here.
-                    </p>
-
-                    <form class="form-inline" action="prosesCekResi.php">
-
+<br>
+<br>
+                    <div class="text-center">
+                        <h3>logo stars</h3>
+                    </div>
+                    <br>
+                    <br>
+                    <form class="form-inline text-center" action="prosesCekResi.php">
                         <div class="form-group m-r-10">
                             <input type="text" class="form-control" id="cari" name="cari" placeholder="EX:031140053960118" required>
                         </div>
@@ -98,25 +61,22 @@
                             Cari
                         </button>
                     </form>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
 
                 </div>
             </div>
 
         </div>
-
-        <!-- content -->
-
-        <!-- footer -->
-        <footer class="footer">
-            2015 © Ubold.
-        </footer>
     </div>
 
     <!-- ========== main content end ========== -->
 
 </div>
 <!-- scripts -->
-...
+
 
 <script>
 

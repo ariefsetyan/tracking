@@ -19,6 +19,53 @@ $trackings = new AfterShip\Trackings($key);
 $last_check_point = new AfterShip\LastCheckPoint($key);
 
 $trackings = new AfterShip\Trackings($key);
+
+//$couriers = new AfterShip\Couriers($key);
+
+$response = $trackings->all();
+
+//$response = $trackings->get('FedEx', 'RA12345678DFS');
+//$response = $trackings->getById('5b67cbffdc0a9dac0b4d93ea', array('title','order_id'));
+$datas = json_encode($response, JSON_PRETTY_PRINT);
+$decode =  json_decode($datas,true);
+print_r($decode);
+//$jm = $decode['data']['count'];
+
+
+for ($i=0;$i<$jm;$i++){
+    echo $decode['data']['trackings'][$i]['tracking_number']."<br>";
+    echo $decode['data']['trackings'][$i]['slug']."<br>";
+
+
+//    for ($y=0;$y<$as;$y++){
+//        echo $decode['data']['trackings'][$i]['checkpoints'][$y]['location']."<br>";
+//        echo $decode['data']['trackings'][$i]['checkpoints'][$y]['message'];
+//    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //$tracking_info = [
 //    'slug'    => 'jne',
 //    'lang'   => 'id',
@@ -29,12 +76,10 @@ $trackings = new AfterShip\Trackings($key);
 
 //$response = $trackings->get('jne', 'RA123456789US', array('title','order_id'));
 
-$response = $trackings->get('jne', '030360029399718', array('fields' => 'title,order_id,tracking_number'));
+//$response = $trackings->get('jne', '030360029399718', array('fields' => 'title,order_id,tracking_number'));
 //    $response = $trackings->all();
 //$response = null;
 
-//$notifications = new AfterShip\Notifications('AFTERSHIP_API_KEY');
-//$response = $notifications->get('jne', '0031630020436318');
 
 //try {
 //    $response = $trackings->all();
@@ -42,17 +87,38 @@ $response = $trackings->get('jne', '030360029399718', array('fields' => 'title,o
 //    echo $e->getMessage();
 //}
 
-$datas = json_encode($response, JSON_PRETTY_PRINT);
-$decode =  json_decode($datas, true);
 
-var_dump($decode);
+
+
+//print_r($decode);
+//echo "tracking_number : ".$decode[0]['data']['tracking']['tracking_number'];
+//echo $decode->tracking[]
+
+//echo "<br>";
+//var_dump($decode);
+//var_dump($response);
 //for ($i=0;$i<count($decode);$i++){
 //    echo $decode[3]['']."<br>";
 //}
-foreach ($decode as $data){
-    echo implode($data);
-//    echo implode($data->);
-
-}
+//foreach ($response as $data){
+////    print_r($datas['fields']) ;
+//    print_r($data);
+////    echo ($data->tracking);
+//
+//}
 
 ?>
+<!--<!doctype html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport"-->
+<!--          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">-->
+<!--    <meta http-equiv="X-UA-Compatible" content="ie=edge">-->
+<!--    <title>Document</title>-->
+<!--</head>-->
+<!--<body>-->
+<!---->
+<!--</body>-->
+<!--</html>-->
+
