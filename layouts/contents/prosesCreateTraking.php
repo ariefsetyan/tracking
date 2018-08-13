@@ -42,8 +42,8 @@ $tracking_info = [
 $response = $trackings->create($NoTrak, $tracking_info);
 
 
-//header("Location: http://localhost:8080/kp/traking/sdk/vendor/aftership/aftership-php-sdk/layouts/contents/tabelresi.php", true, 301);
-//exit();
+header("Location: http://localhost:8080/kp/traking/sdk/vendor/aftership/aftership-php-sdk/layouts/contents/tabelresi.php", true, 301);
+exit();
 
 //try {
 //    $response = $trackings->all();

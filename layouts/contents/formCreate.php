@@ -1,5 +1,5 @@
 <?php
-require ('../../autoload.php');
+require( '../../autoload.php');
 require( '../../src/AfterShipException.php' );
 require( '../../src/BackwardCompatible.php' );
 require( '../../src/Couriers.php' );
@@ -7,7 +7,7 @@ require( '../../src/LastCheckPoint.php' );
 require( '../../src/Notifications.php' );
 require( '../../src/Requestable.php' );
 require( '../../src/Request.php' );
-require('../../src/Trackings.php');
+require( '../../src/Trackings.php');
 
 use \AfterShip\AfterShipException;
 
@@ -77,7 +77,7 @@ echo
         <!-- LOGO -->
         <div class=\"topbar-left\">
             <div class=\"text-center\">
-
+                <a href=\"index.html\" class=\"logo\"><i class=\"icon-magnet icon-c-logo\"></i><span><img src=\"../assets/images/logostsrs.png\" width=\"30%\"></span></a>
             </div>
         </div>
 
@@ -86,14 +86,6 @@ echo
             <div class=\"container\">
                 <div class=\"\">
                     <ul class=\"nav navbar-nav navbar-right pull-right\">
-<!--                        <li class=\"dropdown hidden-xs\"></li>-->
-
-                        <li class=\"dropdown\">
-                            <a href=\"\" class=\"dropdown-toggle profile\" data-toggle=\"dropdown\" aria-expanded=\"true\"><img src=\"../assets/images/users/avatar-1.jpg\" alt=\"user-img\" class=\"img-circle\"> </a>
-                            <ul class=\"dropdown-menu\">
-                                <li><a href=\"javascript:void(0)\"><i class=\"ti-power-off m-r-5\"></i> Logout</a></li>
-                            </ul>
-                        </li>
                     </ul>
                 </div>
                 <!--/.nav-collapse -->
@@ -139,7 +131,7 @@ echo
                             <h4 class=\"m-t-0 header-title\"><b>Form Tambah Data</b></h4>
                             <br>
 
-                            <form action=\"prosesCreateTraking.php\" data-parsley-validate novalidate>
+                            <form action=\"prosesCreateTraking.php\">
 
                                 <div class=\"form-group\">
                                     <label>Tracking Number*</label>
@@ -148,8 +140,8 @@ echo
 
                                 <div class=\"form-group\">
                                     <label>Slug</label>
-                                    <select name=\"slug\" class=\"form-control\">
-                                        <option>...</option>
+                                    <select name=\"slug\" class=\"form-control\" required>
+                                        <option></option>
                                         <option value=\"$dskurir168\">$dmkurir168</option>
                                         <option value=\"$dskurir84\">$dmkurir84</option>
                                         <option value=\"$dskurir169\">$dmkurir169</option>
@@ -163,22 +155,22 @@ echo
                                 
                                 <div class=\"form-group\">
                                     <label>Customer Name</label>
-                                    <input type=\"text\" name=\"cosname\"  placeholder=\"Enter No Trakking\" class=\"form-control\" id=\"notrakking\" required>
+                                    <input type=\"text\" name=\"cosname\"  placeholder=\"Enter Costomer Name\" class=\"form-control\" id=\"notrakking\">
                                 </div>
                                 
                                 <div class=\"form-group\">
                                     <label>Customer Email</label>
-                                    <input type=\"text\" name=\"email\"  placeholder=\"Enter No Trakking\" class=\"form-control\" id=\"notrakking\" required>
+                                    <input type=\"text\" name=\"email\"  placeholder=\"Enter Customer Email\" class=\"form-control\" id=\"notrakking\">
                                 </div>
                                 
                                 <div class=\"form-group\">
                                     <label>Order ID</label>
-                                    <input type=\"text\" name=\"OrderID\"  placeholder=\"Enter No Trakking\" class=\"form-control\" id=\"notrakking\" required>
+                                    <input type=\"text\" name=\"OrderID\"  placeholder=\"Enter Order ID\" class=\"form-control\" id=\"notrakking\">
                                 </div>
                                 
                                 <div class=\"form-group\">
                                     <label>Note</label>
-                                    <input type=\"text\" name=\"note\"  placeholder=\"Enter No Trakking\" class=\"form-control\" id=\"notrakking\" required>
+                                    <textarea class=\"form-control\" name=\"note\"></textarea>
                                 </div>
                                 
                                 <div class=\"form-group text-right m-b-0\">

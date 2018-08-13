@@ -83,15 +83,10 @@ echo
             <div class=\"container\">
                 <div class=\"\">
                     <ul class=\"nav navbar-nav navbar-right pull-right\">
-                        <li class=\"dropdown hidden-xs\">
+                        <li class=\"dropdown hidden-xs\"></li>
 
 
-                        <li class=\"dropdown\">
-                            <a href=\"\" class=\"dropdown-toggle profile\" data-toggle=\"dropdown\" aria-expanded=\"true\"><img src=\"../assets/images/users/avatar-1.jpg\" alt=\"user-img\" class=\"img-circle\"> </a>
-                            <ul class=\"dropdown-menu\">
-                                <!--                                <li><a href=\"javascript:void(0)\"><i class=\"ti-power-off m-r-5\"></i> Logout</a></li>-->
-                            </ul>
-                        </li>
+                        
                     </ul>
                 </div>
                 <!--/.nav-collapse -->

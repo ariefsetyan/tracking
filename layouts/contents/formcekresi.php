@@ -48,7 +48,7 @@
 <br>
 <br>
                     <div class="text-center">
-                        <h3>logo stars</h3>
+                        <img src="../assets/images/logostsrs1.png" style="height: 200px; height: 200px">
                     </div>
                     <br>
                     <br>
