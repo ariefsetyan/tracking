@@ -17,7 +17,7 @@ require('../../src/Trackings.php');
 
 use \AfterShip\AfterShipException;
 
-$key = 'b4ccc46a-fbbd-4f0c-913b-9b5e74e71362';
+$key = '80a31524-539c-4ef2-9f56-68ec51456334';
 
 $couriers = new AfterShip\Couriers($key);
 $trackings = new AfterShip\Trackings($key);
@@ -25,13 +25,34 @@ $last_check_point = new AfterShip\LastCheckPoint($key);
 
 $trackings = new AfterShip\Trackings($key);
 
-$ni = $_GET['ni'];
-//var_dump($ni);
-$response = $trackings->getById($ni);
+$couriers = new AfterShip\Couriers($key);
+$response = $couriers->all();
 
 $datas = json_encode($response, JSON_PRETTY_PRINT);
 $decode =  json_decode($datas,true);
-//print_r($decode);
+
+$dskurir84 = $decode['data']['couriers'][84]['slug'];
+$dmkurir84 = $decode['data']['couriers'][84]['name'];
+$dskurir169 = $decode['data']['couriers'][169]['slug'];
+$dmkurir169 = $decode['data']['couriers'][169]['name'];
+$dskurir115 = $decode['data']['couriers'][115]['slug'];
+$dmkurir115 = $decode['data']['couriers'][115]['name'];
+$dskurir123 = $decode['data']['couriers'][123]['slug'];
+$dmkurir123 = $decode['data']['couriers'][123]['name'];
+$dskurir56 = $decode['data']['couriers'][56]['slug'];
+$dmkurir56 = $decode['data']['couriers'][56]['name'];
+$dskurir334 = $decode['data']['couriers'][334]['slug'];
+$dmkurir334 = $decode['data']['couriers'][334]['name'];
+$dskurir168 = $decode['data']['couriers'][168]['slug'];
+$dmkurir168 = $decode['data']['couriers'][168]['name'];
+
+$ni = $_GET['ni'];
+$response = $trackings->getById($ni);
+//var_dump($response);die();
+
+$datas = json_encode($response, JSON_PRETTY_PRINT);
+$decode =  json_decode($datas,true);
+//print_r($decode);die();
 
 $notrack = $decode['data']['tracking']['tracking_number'];
 $slug = $decode['data']['tracking']['slug'];
@@ -86,7 +107,7 @@ echo
                         <li class=\"dropdown hidden-xs\"></li>
 
 
-                        
+
                     </ul>
                 </div>
                 <!--/.nav-collapse -->
@@ -122,6 +143,7 @@ echo
                     <h4 class=\"m-t-0 header-title\"><b>Form Update</b></h4>
 
                     <form action=\"updatetrakking.php\" data-parsley-validate novalidate>
+                        <input type=\"text\" name=\"id\" parsley-trigger=\"change\" required value=\"$ni\" class=\"form-control\" id=\"notrakking\">
                         <div class=\"form-group\">
                             <label>No Trakking*</label>
                             <input type=\"text\" name=\"notrakking\" parsley-trigger=\"change\" required value=\"$notrack\" class=\"form-control\" id=\"notrakking\">
@@ -131,9 +153,21 @@ echo
                             <select name=\"slug\" class=\"form-control\">
                                 <!--<option value=\"JNE\">JNE</option>-->
                                 <option value=\"$slug\">$slug</option>
-                                <!--<option value=\"UPS\">UPS</option>-->
+//                                <!--<option value=\"UPS\">UPS</option>-->
                             </select>
 
+                        </div>
+                        <div class=\"form-group\">
+                            <label>costomer name</label>
+                            <input type=\"text\" name=\"cname\" parsley-trigger=\"change\" required class=\"form-control\">
+                        </div>
+                        <div class=\"form-group\">
+                            <label>email</label>
+                            <input type=\"text\" name=\"email\" parsley-trigger=\"change\" required class=\"form-control\">
+                        </div>
+                        <div class=\"form-group\">
+                            <label>note</label>
+                            <input type=\"text\" name=\"note\" parsley-trigger=\"change\" required class=\"form-control\">
                         </div>
 
                         <div class=\"form-group text-right m-b-0\">

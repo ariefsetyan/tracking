@@ -185,6 +185,7 @@ $decode =  json_decode($datas,true);
                                             <a href=\"delete.php?ni=$id\" class=\"on-default remove-row \"><i class=\"fa fa-trash-o\"></i></a>
                                             <a href=\"Histori.php?ni=$id\" class=\"on-defaultedit-row \"><i>| Status</i></a>
                                             <a href=\"detil.php?ni=$id\" class=\"on-defaultedit-row \"><i>| Detil</i></a>
+                                            <a href=\"formupdate.php?ni=$id\" class=\"on-defaultedit-row \"><i>| Detil</i></a>
                                         </td>
                                     </tr>";
                                 }

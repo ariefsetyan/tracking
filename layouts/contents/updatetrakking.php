@@ -17,9 +17,13 @@ require('../../src/Trackings.php');
 
 use \AfterShip\AfterShipException;
 
-$key = 'b4ccc46a-fbbd-4f0c-913b-9b5e74e71362';
-//$NoTrak = $_GET['notrakking'];
-//$slug = $_GET['slug'];
+$key = '80a31524-539c-4ef2-9f56-68ec51456334';
+$ni = $_GET['id'];
+$NoTrak = $_GET['notrakking'];
+$slug = $_GET['slug'];
+$email = $_GET['email'];
+$name = $_GET['cname'];
+$note = $_GET['note'];
 //$title = $_GET['title'];
 
 $couriers = new AfterShip\Couriers($key);
@@ -28,15 +32,19 @@ $last_check_point = new AfterShip\LastCheckPoint($key);
 
 $trackings = new AfterShip\Trackings($key);
 $params = array(
-    'smses'             => [],
-    'emails'            => [],
-    'title'             => '',
-    'customer_name'     => '',
-    'order_id'          => '',
-    'order_id_path'     => '',
-    'custom_fields'     => []
+    'tracking_number'=>$NoTrak,
+    'slug'=>$slug,
+//    'smses'             => [],
+    'emails'            => [$email],
+    'title'         => 'T1',
+    'customer_name'     => $name,
+    'note'     => $note,
+//    'order_id'          => '',
+//    'order_id_path'     => '',
+//    'custom_fields'     => []
 );
-$response = $trackings->updateById('53df4a90868a6df243b6efd8', $params);
+//var_dump($NoTrak);die();
+$response = $trackings->updateById($ni, $params);
 
 try {
     $response = $trackings->all();

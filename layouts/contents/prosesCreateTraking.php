@@ -17,7 +17,7 @@ require('../../src/Trackings.php');
 
 use \AfterShip\AfterShipException;
 
-$key = 'b4ccc46a-fbbd-4f0c-913b-9b5e74e71362';
+$key = '80a31524-539c-4ef2-9f56-68ec51456334';
 $NoTrak = $_GET['notrakking'];
 $slug = $_GET['slug'];
 $customer_name = $_GET['cosname'];
@@ -31,7 +31,7 @@ $last_check_point = new AfterShip\LastCheckPoint($key);
 
 $trackings = new AfterShip\Trackings($key);
 $tracking_info = [
-    'title'    => $title,
+    'title'    => 'title',
     'slug'    => $slug,
     'lang'    => 'id',
     'customer_name'    => $customer_name,
@@ -42,7 +42,7 @@ $tracking_info = [
 $response = $trackings->create($NoTrak, $tracking_info);
 
 
-header("Location: http://localhost:8080/kp/traking/sdk/vendor/aftership/aftership-php-sdk/layouts/contents/tabelresi.php", true, 301);
+header("Location: http://localhost:81/traking/layouts/contents/tabelresi.php", true, 301);
 exit();
 
 //try {
